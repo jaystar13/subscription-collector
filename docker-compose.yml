@@ -1,0 +1,13 @@
+services:
+  db:
+    image: postgres:16 # 최신 안정화 버전 권장
+    container_name: collector-postgres
+    restart: always
+    environment:
+      POSTGRES_USER: collector
+      POSTGRES_PASSWORD: collector1!
+      POSTGRES_DB: collector_db
+    ports:
+      - "5433:5432"                 # 로컬포트:컨테이너포트
+    volumes:
+      - ./postgres_data:/var/lib/postgresql/data # 데이터 영구 보관용

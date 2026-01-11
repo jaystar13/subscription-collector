@@ -1,0 +1,17 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+.env
+
+# Databases (Docker)
+postgres_data/
+
+# Alembic
+# 만약 마이그레이션 이력을 공유하고 싶다면 migrations/*.py는 제외해야 하지만,
+# 보통 환경마다 다를 수 있어 주의가 필요합니다. (현재는 포함하는 것이 일반적)
+
+# IDE
+.vscode/
+.idea/
