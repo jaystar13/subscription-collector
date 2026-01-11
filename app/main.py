@@ -14,7 +14,7 @@ async def lifespan(app: FastAPI):
     # 예: 1시간마다 실행 (hours=1) / 테스트를 위해 10분마다로 설정 가능
     scheduler.add_job(
         collect_all_domains_task,
-        IntervalTrigger(minutes=3),  # 운영 시에는 hours=1로 변경
+        IntervalTrigger(hours=1),  # 운영 시에는 hours=1로 변경
         id="collection_job_v1",
         replace_existing=True
     )
